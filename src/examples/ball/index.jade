@@ -1,0 +1,28 @@
+doctype html
+html(lang="en", ng-app="angular-pixi-example", ng-controller="AppController")
+  head
+    base(href="/")
+    title angular-pixi-example
+    //- Viewport mobile tag for sensible mobile support
+    meta(name="viewport",content="width=device-width, initial-scale=1, maximum-scale=1, minimum-scale=1, user-scalable=no")
+    //- Stylesheets
+    //- link(href='/dest/styles/libs.css', rel='stylesheet')
+    //- link(href='/dest/styles/app.css', rel='stylesheet')
+    //- link(href='/dest/examples/ball/app.css', rel='stylesheet')
+  body
+    pixi(
+      width='200',
+      height='200',
+      stage='container',
+      renderer='auto',
+      fps='60',
+      render-func='renderer',
+      auto-resize='true',
+      transparent='true',
+      clear-before-render='false',
+      backgroundColor='0xFF44AA',
+    )
+    //- Scripts
+    script(type="text/javascript", charset="utf-8", src="/dest/scripts/libs.js")
+    script(type="text/javascript", charset="utf-8", src="/dest/scripts/app.js")
+    script(type="text/javascript", charset="utf-8", src="/dest/examples/ball/app.js")

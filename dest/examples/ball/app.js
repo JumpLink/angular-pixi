@@ -1,0 +1,2 @@
+!function(){"use strict";var ape=angular.module("angular-pixi-example",["angular-pixi"]);ape.controller("AppController",["$log","$scope","PIXI",function($log,$scope,PIXI){$log.debug("[AppController]"),$scope.container=new PIXI.Container;var g;g=new PIXI.Graphics,g.beginFill(16711680,1),g.drawCircle(50,50,20),g.endFill(),$scope.container.addChild(g),$log.debug("[AppController.g]",g);var back=!1;$scope.renderer=function(renderer,container,delta){return back?g.y-=1:g.y+=1,g.y>40?back=!0:g.y<=0&&(back=!1),!0}}])}();
+//# sourceMappingURL=app.js.map
